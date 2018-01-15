@@ -1,0 +1,7 @@
+<div class="theses">
+    <ul>
+        {{ range $.Site.Data.Theses }}
+	        <li class="theses">{{ .Candidate }} - "{{ .Title }}" ({{.Institute}}, {{ .Year }}, {{.Degree}})</li>
+    	{{ end } }
+    </ul>
+</div>
