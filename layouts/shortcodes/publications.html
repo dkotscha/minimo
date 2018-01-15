@@ -1,6 +1,9 @@
-ul>
+<div class="theses">
+<ul>
 {{ $data := index .Site.Data (.Get 0) }}
-{{ range $data.Theses }}
+{{ range $data }}
 <li>{{ . | markdownify}}</li>
 {{ end }}
 </ul>
+</div>
+
