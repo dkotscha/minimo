@@ -1,8 +1,6 @@
-<div class="theses">
-    {{ $data := index .Site.Data (.Get 0) }}
-    <ul>
-        {{ range $data.Theses }}
-          <li class="theses">{{ .Candidate }} - "{{.Title }}" ({{.Institute}}, {{.Year }}, {{.Degree}})</li>
-        {{ end }}
-    </ul>
-</div>
+ul>
+{{ $data := index .Site.Data (.Get 0) }}
+{{ range $data.list }}
+<li>{{ . | markdownify}}</li>
+{{ end }}
+</ul>
