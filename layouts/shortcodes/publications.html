@@ -1,7 +1,6 @@
 <div class="theses">
 <ul>
-{{ $data := index .Site.Data (.Get 0) }}
-{{ range $data }}
+{{ range .Site.Data.theses }}
 <li class="theses">{{ .Candidate }} - "{{.Title }}" ({{.Institute}}, {{.Year }}, {{.Degree}})</li>
 {{ end }}
 </ul>
