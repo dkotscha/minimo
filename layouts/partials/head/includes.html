@@ -4,6 +4,12 @@
 <link rel='icon' href='{{ ( or .Site.Params.assets.favicon "favicon.ico" ) | relURL }}'>
 <link rel='stylesheet' href='{{ print "/assets/css/" .Site.Data.assets.main.css | relURL  }}'>
 
+<script type="text/javascript"
+	  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+
 {{- range .Site.Params.assets.customCSS -}}
   <link rel='stylesheet' href='{{ . | relURL }}'>
 {{- end -}}
